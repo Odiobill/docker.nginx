@@ -19,5 +19,5 @@ VOLUME /var/log/nginx
 
 EXPOSE 80
 
-CMD ["/usr/sbin/nginx"]
+CMD ["nginx"]
 
