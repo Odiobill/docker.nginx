@@ -9,8 +9,8 @@ You can execute it with something like:
 
     docker run -d -P --name nginx odiobill/nginx
 
-To configure your services, you may want to run another (temporary) container that imports its volumes. Run it with:
+To configure your services, just run *docker inspect nginx* and locate the *configurations* volume to edit its file. To test any change before making them available on the main container, you may want to run another (temporary) one that imports its volumes. Run it with:
 
-    docker run -i -t --name config.nginx --volumes-from nginx odiobill/nginx bash
+    docker run -i -t -P --name config.nginx --volumes-from nginx odiobill/nginx bash
 
 
