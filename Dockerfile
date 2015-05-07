@@ -1,6 +1,6 @@
-# debian-based container for nginx
-# VERSION               0.2
-FROM debian:wheezy
+# nginx debian-based container
+# VERSION               0.3
+FROM debian:jessie
 MAINTAINER Davide Lucchesi  "davide@lucchesi.nl"
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ABF5BD827BD9BF62
@@ -16,5 +16,5 @@ VOLUME /var/log/nginx
 
 EXPOSE 80
 
-CMD ["nginx"]
+CMD ["/usr/sbin/nginx"]
 
